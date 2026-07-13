@@ -16,8 +16,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v7.0.0
       - name: Install Dependencies
+        working-directory: ./my-workflow-app
         run: npm install
       - name: Build Next.JS
+        working-directory: ./my-workflow-app
         run: npm run build
       - name: Deploy App
         run: echo "Deploy App...."
